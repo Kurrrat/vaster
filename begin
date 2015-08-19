@@ -1,0 +1,5 @@
+/**
+ * VAST parser and handler library
+ */
+(function() {
+

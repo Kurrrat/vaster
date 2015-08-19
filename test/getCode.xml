@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<VAST version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://specs.adfox.ru/uploads/vast.xsd">
+<Ad id="1318547">
+<InLine>
+<AdSystem>AdFox.Ru</AdSystem>
+<AdTitle>Linear Video Ad</AdTitle>
+<Description>video ad</Description>
+<Error><![CDATA[http://ads.adfox.ru/230620/event?hash=15be8de008334537&pm=u&lts=eqrwpup&pr=ellbqhn&p5=cxanj&rand=cjidnkz&p1=bslrn&p2=fcmk]]></Error>
+<Impression><![CDATA[http://ads.adfox.ru/230620/event?hash=713fee5121d1689d&pm=d&lts=eqrwpup&pr=ellbqhn&p5=cxanj&rand=fdvyveq&p1=bslrn&p2=fcmk]]></Impression>
+<Creatives>
+<Creative>
+<Linear>
+
+<Duration>00:00:26</Duration>
+
+<TrackingEvents>
+<Tracking event="creativeView"><![CDATA[http://ads.adfox.ru/230620/event?hash=4ac789406446cc44&pm=c&lts=eqrwpup&pr=ellbqhn&p5=cxanj&rand=hftufp&p1=bslrn&p2=fcmk]]></Tracking>
+<Tracking event="start"><![CDATA[http://ads.adfox.ru/230620/event?hash=9b070146478410d1&pm=b&lts=eqrwpup&pr=ellbqhn&p5=cxanj&rand=gybzvdj&p1=bslrn&p2=fcmk]]></Tracking>
+<Tracking event="midpoint"><![CDATA[http://ads.adfox.ru/230620/event?hash=34bd112cfa2daf9f&pm=f&lts=eqrwpup&pr=ellbqhn&p5=cxanj&rand=eilbeli&p1=bslrn&p2=fcmk]]></Tracking>
+<Tracking event="firstQuartile"><![CDATA[http://ads.adfox.ru/230620/event?hash=f6bbe118c184c166&pm=e&lts=eqrwpup&pr=ellbqhn&p5=cxanj&rand=cphgglm&p1=bslrn&p2=fcmk]]></Tracking>
+<Tracking event="thirdQuartile"><![CDATA[http://ads.adfox.ru/230620/event?hash=a7c52d9ed2216a24&pm=g&lts=eqrwpup&pr=ellbqhn&p5=cxanj&rand=cyobehi&p1=bslrn&p2=fcmk]]></Tracking>
+<Tracking event="complete"><![CDATA[http://ads.adfox.ru/230620/event?hash=eebb5c33867b6abe&pm=h&lts=eqrwpup&pr=ellbqhn&p5=cxanj&rand=gelmxct&p1=bslrn&p2=fcmk]]></Tracking>
+<Tracking event="mute"><![CDATA[http://ads.adfox.ru/230620/event?hash=4bdf11cc85a1f8c1&pm=i&lts=eqrwpup&pr=ellbqhn&p5=cxanj&rand=cqhvcga&p1=bslrn&p2=fcmk]]></Tracking>
+<Tracking event="unmute"><![CDATA[http://ads.adfox.ru/230620/event?hash=c7431fff5d32eb76&pm=j&lts=eqrwpup&pr=ellbqhn&p5=cxanj&rand=ctohqcj&p1=bslrn&p2=fcmk]]></Tracking>
+<Tracking event="pause"><![CDATA[http://ads.adfox.ru/230620/event?hash=7927294a9f5989aa&pm=k&lts=eqrwpup&pr=ellbqhn&p5=cxanj&rand=xmjwxm&p1=bslrn&p2=fcmk]]></Tracking>
+<Tracking event="rewind"><![CDATA[http://ads.adfox.ru/230620/event?hash=e2143a8759955b88&pm=l&lts=eqrwpup&pr=ellbqhn&p5=cxanj&rand=bneduhg&p1=bslrn&p2=fcmk]]></Tracking>
+<Tracking event="resume"><![CDATA[http://ads.adfox.ru/230620/event?hash=e7faee02d53c47f3&pm=m&lts=eqrwpup&pr=ellbqhn&p5=cxanj&rand=bxnyhwv&p1=bslrn&p2=fcmk]]></Tracking>
+<Tracking event="fullscreen"><![CDATA[http://ads.adfox.ru/230620/event?hash=6c357fdb06a7cd74&pm=n&lts=eqrwpup&pr=ellbqhn&p5=cxanj&rand=dhyvcmc&p1=bslrn&p2=fcmk]]></Tracking>
+<Tracking event="expand"><![CDATA[http://ads.adfox.ru/230620/event?hash=64d41423d845f12f&pm=o&lts=eqrwpup&pr=ellbqhn&p5=cxanj&rand=gpgmtlo&p1=bslrn&p2=fcmk]]></Tracking>
+<Tracking event="collapse"><![CDATA[http://ads.adfox.ru/230620/event?hash=e70a8618dfbc3a77&pm=p&lts=eqrwpup&pr=ellbqhn&p5=cxanj&rand=bmmzrtl&p1=bslrn&p2=fcmk]]></Tracking>
+<Tracking event="acceptInvitation"><![CDATA[http://ads.adfox.ru/230620/event?hash=4d0d07c75328af64&pm=q&lts=eqrwpup&pr=ellbqhn&p5=cxanj&rand=ckucbln&p1=bslrn&p2=fcmk]]></Tracking>
+<Tracking event="close"><![CDATA[http://ads.adfox.ru/230620/event?hash=e144b4314974066a&pm=r&lts=eqrwpup&pr=ellbqhn&p5=cxanj&rand=enfetqz&p1=bslrn&p2=fcmk]]></Tracking>
+</TrackingEvents>
+
+<AdParameters/>
+
+<VideoClicks>
+<ClickThrough><![CDATA[http://ads.adfox.ru/230620/goLink?pr=ellbqhn&p5=cxanj&p1=bslrn&p2=fcmk@http://boxdigital.ru/]]></ClickThrough>
+</VideoClicks>
+
+<MediaFiles>
+<MediaFile id="1" delivery="progressive" type="audio/mpeg" bitrate="" maintainAspectRatio="false" scalable="true" width="1" height="1"><![CDATA[http://content.adfox.ru/150529/adfox/477963/1308804_1.mp3?rnd=1371413563]]></MediaFile>
+</MediaFiles>
+
+</Linear>
+</Creative>
+</Creatives>
+
+<Extensions>
+<Extension type="startTime"><![CDATA[00:00]]></Extension>
+<Extension type="skipTime"><![CDATA[00:10]]></Extension>
+<Extension type="skipTime2"><![CDATA[00:10]]></Extension>
+<Extension type="linkTxt"><![CDATA[&#1087;&#1077;&#1088;&#1077;&#1081;&#1090;&#1080; &#1085;&#1072; &#1089;&#1072;&#1081;&#1090; &#1088;&#1077;&#1082;&#1083;&#1072;&#1084;&#1086;&#1076;&#1072;&#1090;&#1077;&#1083;&#1103;]]></Extension>
+<Extension type="controls"><![CDATA[1]]></Extension>
+<Extension type="isClickable"><![CDATA[1]]></Extension>
+<Extension type="skipAd"><![CDATA[http://ads.adfox.ru/230620/event?hash=9db72f351fbef254&pm=s&lts=eqrwpup&pr=ellbqhn&p5=cxanj&rand=bjgeyzm&p1=bslrn&p2=fcmk]]></Extension>
+<Extension type="addClick"><![CDATA[http://ads.adfox.ru/230620/event?hash=d8dd9ab20e33ad03&pm=t&lts=eqrwpup&pr=ellbqhn&p5=cxanj&rand=dxtwsly&p1=bslrn&p2=fcmk]]></Extension>
+</Extensions>
+</InLine>
+</Ad>
+</VAST>

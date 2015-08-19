@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="VASTer build" basedir="." default="concat">
+    <taskdef name="jscomp" classname="com.google.javascript.jscomp.ant.CompileTask" classpath="${basedir}/compiler/compiler.jar"/>
+
+    <target name="concat">
+        <concat append="false" destfile="${basedir}/build/vaster.js">
+            <fileset dir='${basedir}' includes='begin'/>
+            <fileset dir="${basedir}/src" includes="**/*"/>
+            <fileset dir='${basedir}' includes='end'/>
+        </concat>
+    </target>
+
+    <target name="build" depends="concat">
+        <jscomp compilationLevel="simple" warning="default" debug="false" output="${basedir}/build/vaster.min.js" languageIn="ECMASCRIPT5">
+            <sources dir="${basedir}/build">
+                <file name="vaster.js"/>
+            </sources>
+        </jscomp>
+    </target>
+
+</project>

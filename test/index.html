@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+
+    <div id="advert_place" style="width:640px;height:360px;"></div>
+
+    <script type="text/javascript" src="../build/vaster.js"></script>
+    <script>
+
+        var vast = new window.VASTer({
+            xmlPath: "getCode.xml",
+            timeoutSec: 10,
+            withCredentials: false,
+            observer: {
+                'error': function() {
+                        console.log('error');
+                    },
+                'ready': function(obj) {
+                        // console.log(obj);
+                        if (obj.creatives.length == 0) return;
+
+                        // TODO: analize extensions
+
+                        var creative = obj.creatives[0];
+                        var medias = obj.creatives[0].mediaFiles;
+
+                        for (var i = 0; i < medias.length; i++) {
+
+                            if (medias[i].type == "video/x-flv" || medias[i].type == "video/mp4") {
+
+                                var v = window.document.createElement("video");
+                                v.id = "advideo";
+                                v.style.width = "100%";
+                                v.style.height = "auto";
+                                v.style.margin = "0px auto";
+                                v.style.padding = "0px";
+                                v.src = medias[i].file;
+                                window.document.getElementById("advert_place").appendChild(v);
+
+                                v.play();
+                                return;
+
+                            } else if (medias[i].type == 'audio/mpeg') {
+
+                                var media = medias[i];
+                                var events = creative.events;
+                                var extensions = obj.extensions;
+                                var skipoffset = creative.skipoffset;
+                                var closeoffset = creative.skipoffset;
+                                var isClickable = true;
+                                var linkText = "";
+                                var showControls = true;
+
+                                // parse adfox extensions
+                                for (var i = 0; i < extensions.length; i++) {
+
+                                    if (extensions[i].type == "skipTime") {
+
+                                        // time to show "can skip" button
+                                        skipoffset = vast.parseTime(extensions[i].value)
+
+                                    } else if (extensions[i].type == "skipTime2") {
+
+                                        // time to show "close" button
+                                        closeoffset = vast.parseTime(extensions[i].value);
+
+                                    } else if (extensions[i].type == "linkTxt") {
+
+                                        // text to show with visit link
+                                        linkText = extensions[i].value;
+
+                                    } else if (extensions[i].type == "isClickable") {
+
+                                        // if advert is clickable
+                                        isClickable = (extensions[i].value == "1");
+
+                                    } else if (extensions[i].type == "skipAd") {
+
+                                        // additional event for skip event
+                                        events.addEvent("skip", extensions[i].value);
+
+                                    } else if (extensions[i].type == "addClick") {
+
+                                        // additional event for click event
+                                        events.addEvent("click", extensions[i].value);
+
+                                    } else if (extensions[i].type == "controls") {
+
+                                        // show our advert controls or not (used with wrapper ad)
+                                        showControls = (extensions[i].value == "1");
+                                    }
+                                }
+
+                                events.handleSelect();
+
+                                var v = window.document.createElement("audio");
+                                v.id = "advideo";
+                                v.style.width = "100%";
+                                v.style.height = "auto";
+                                v.style.margin = "0px auto";
+                                v.style.padding = "0px";
+                                v.src = media.file;
+
+                                var duration = creative.duration;
+
+                                // add  events
+                                v.oncanplay = function() {
+                                    events.handleLoad();
+                                };
+                                v.ontimeupdate = function() {
+                                    duration = duration || v.duration;
+                                    events.handleProgress( v.currentTime / duration);
+                                };
+                                v.onended = function() {
+                                    events.handleComplete();
+                                };
+                                v.onerror = function() {
+                                    events.handleError();
+                                };
+
+                                window.document.getElementById("advert_place").appendChild(v);
+
+                                v.play();
+
+                            } else if (medias[i].type == 'application/javascript') {
+                                v.playVpaid(obj.creatives[0], obj.creatives[0].mediaFiles[i], window.document.getElementById("advert_place"), true);
+                                return;
+                            }
+                        }
+
+                    },
+                'skip': function() {
+                        // console.log('skip');
+                    },
+                'close': function() {
+                        // console.log('close');
+                    },
+                'complete': function() {
+                        // console.log('complete');
+                    }
+            }
+        });
+        // http://kurrrat.com/test/vast.php?type=inline_linear_video
+        // http://public.advarkads.com/vast?target_id=1&type_id=3&id=4250-2-3&referer_url=http://onlineguru.ru/x/test.php&video_id=22222&video_title=test_video&video_page_url=http://onlineguru.ru/x/test.php&autoplay=1&duration=60%27
+        // http://ads.adfox.ru/230620/getCode?pp=g&ps=cbhe&p2=fcmk&pfc=a&pfb=a&plp=a&pli=a&pop=a
+        // wrapper - // http://ads.adfox.ru/168662/getCode?pp=i&ps=bfcd&p2=epaj&pfc=a&pfb=a&plp=a&pli=a&pop=a
+
+    </script>
+
+</body>
+</html>
